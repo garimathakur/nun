@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sky Gradient Layout</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(
+          135deg,
+          #4a90e2 35%,
+          /* Extended sky blue */ #a0d2eb 50%,
+          /* Soft light teal */ #f8b07a 65%,
+          /* Gentle peach transition */ #e07e47 80%,
+          /* Warm orange */ #8f563b 95%,
+          /* Earthy brown */ #6b3e26 100% /* Deep dark brown */
+        );
+
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+        padding: 50px;
+        position: relative;
+      }
+      .left,
+      .right {
+        width: 45%;
+        position: relative;
+        z-index: 2;
+      }
+      .logo {
+        font-size: 48px;
+        color: #ff4500;
+        margin-bottom: 20px;
+      }
+      .description {
+        font-size: 18px;
+        color: #8b0000;
+      }
+      .contact {
+        font-size: 18px;
+        color: #000000;
+      }
+      .contact a {
+        color: #1e90ff;
+        text-decoration: none;
+      }
+      .slanted-line {
+        position: absolute;
+        left: 48%;
+        top: 5%;
+        width: 2px;
+        height: 90%;
+        background: black;
+        transform: rotate(30deg);
+        z-index: 1;
+      }
+      .footer {
+        text-align: center;
+        font-size: 14px;
+        color: #000000;
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+      }
+      /* Mobile Version */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          text-align: center;
+          height: auto;
+        }
+        .left,
+        .right {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+        .slanted-line {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        <div class="logo">Logo Placeholder</div>
+        <div class="description">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p>Cras venenatis euismod malesuada.</p>
+        </div>
+      </div>
+      <div class="slanted-line"></div>
+      <div class="right">
+        <div class="contact">
+          <p>Find us <a href="#">Instagram</a></p>
+          <p>
+            Reach out to us
+            <a href="mailto:example@example.com">example@example.com</a>
+          </p>
+          <p>Support us <a href="#">GoFundMe link</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </body>
+</html>
