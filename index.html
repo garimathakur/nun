@@ -3,113 +3,143 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sky Gradient Layout</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background: linear-gradient(
-          135deg,
-          #4a90e2 35%,
-          /* Extended sky blue */ #a0d2eb 50%,
-          /* Soft light teal */ #f8b07a 65%,
-          /* Gentle peach transition */ #e07e47 80%,
-          /* Warm orange */ #8f563b 95%,
-          /* Earthy brown */ #6b3e26 100% /* Deep dark brown */
-        );
+    <title>Nůn Studios Layout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- 
+    - Build responsive design
+    - stye the right div
+    -->
 
-        margin: 0;
-        padding: 0;
+    <style>
+      /* @import url('https://fonts.cdnfonts.com/css/adobe-caslon-pro'); Caslon font import */
+
+      body {
+        background: #19cee2;
+        background: linear-gradient(
+          169deg,
+          rgba(25, 206, 226, 1) 0%,
+          rgba(250, 204, 135, 1) 68%,
+          rgba(254, 156, 110, 1) 100%
+        );
+        color: #770000;
+        height: 94vh; /*Ensures full gradient visibility*/
+        justify-content: space-between;
+      }
+      .logo {
+        margin-top: 3.8%;
+        margin-left: 10%;
+        width: 8%;
+        filter: invert(42%) sepia(96%) saturate(1000%) hue-rotate(-10deg); /* Converts black to orange */
       }
       .container {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 100vh;
-        padding: 50px;
-        position: relative;
+        justify-content: center;
+        margin-left: 5%;
       }
-      .left,
+      .left {
+        width: 30%;
+        margin-top: 1%;
+        margin-left: 17%;
+        margin-right: 5%;
+        font-size: 1.7vw;
+        font-family: 'Libre Caslon Text', serif;
+        font-style: italic;
+        font-weight: bold;
+        font-weight: 400;
+        line-height: 1.7;
+      }
       .right {
         width: 45%;
-        position: relative;
-        z-index: 2;
+        margin-top: 7%;
+        margin-left: 12%;
+        font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+        font-size: 1.1vw;
+        font-weight: 900;
+        line-height: 1.7;
       }
-      .logo {
-        font-size: 48px;
-        color: #ff4500;
-        margin-bottom: 20px;
-      }
-      .description {
-        font-size: 18px;
-        color: #8b0000;
-      }
-      .contact {
-        font-size: 18px;
-        color: #000000;
-      }
-      .contact a {
-        color: #1e90ff;
+      .right a {
+        color: #770000;
         text-decoration: none;
       }
       .slanted-line {
-        position: absolute;
-        left: 48%;
-        top: 5%;
-        width: 2px;
-        height: 90%;
-        background: black;
-        transform: rotate(30deg);
-        z-index: 1;
+        width: 1px;
+        height: 55vh;
+        background: #770000;
+        transform: rotate(20deg);
       }
-      .footer {
+      .bottom-text {
+        position: relative;
         text-align: center;
-        font-size: 14px;
-        color: #000000;
-        position: absolute;
-        bottom: 20px;
-        width: 100%;
+        font-size: 1vw;
+        line-height: 1.5;
+        font-family: 'Libre Caslon Text', serif;
+        font-weight: 500;
+        width: 21%;
+        margin-left: 38%;
+        margin-top: 2%;
       }
-      /* Mobile Version */
       @media (max-width: 768px) {
         .container {
           flex-direction: column;
           text-align: center;
           height: auto;
         }
-        .left,
-        .right {
-          width: 100%;
-          margin-bottom: 20px;
-        }
-        .slanted-line {
-          display: none;
+        .logo {
+          width: 5%;
+          background-color: #1e90ff;
         }
       }
     </style>
   </head>
+
   <body>
+    <!-- Embedded SVG for Nůn Logo -->
+    <div class="logo">
+      <img src="nun.svg" alt="Nůn Studios Logo" />
+    </div>
     <div class="container">
       <div class="left">
-        <div class="logo">Logo Placeholder</div>
-        <div class="description">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <p>Cras venenatis euismod malesuada.</p>
-        </div>
+        nůn studios is a cooperatively run risograph and publication studio
+        located in Portland, Oregon. We function not only as a workspace but as
+        a center where art converges with advocacy.
       </div>
       <div class="slanted-line"></div>
       <div class="right">
-        <div class="contact">
-          <p>Find us <a href="#">Instagram</a></p>
-          <p>
-            Reach out to us
-            <a href="mailto:example@example.com">example@example.com</a>
-          </p>
-          <p>Support us <a href="#">GoFundMe link</a></p>
-        </div>
+        <p>
+          <span style="color: #0c7d81">Find us&nbsp;</span>
+          <a href="https://instagram.com/hypothetical_link" target="_blank">
+            <img
+              src="Instagram_logo.png"
+              alt="Instagram"
+              width="40"
+              style="vertical-align: middle; margin: 0px 5px"
+            />
+          </a>
+        </p>
+
+        <p>
+          <span style="color: #0c7d81">Reach out to us &nbsp;</span>
+          <a href="mailto:nun.studios.pdx@gmail.com"
+            >nun.studios.pdx@gmail.com</a
+          >
+        </p>
+        <p>
+          <span style="color: #0c7d81">Support us&nbsp;</span>
+          <a href="#">GoFundMe link</a>
+        </p>
       </div>
     </div>
-    <div class="footer">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <div class="bottom-text">
+      Support the world of print and publication with nůn, a collective of
+      artists, activists, and organizations committed to transforming ideas into
+      impactful prints.
     </div>
   </body>
 </html>
