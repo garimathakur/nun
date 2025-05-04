@@ -13,8 +13,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- 
-    - Build responsive design
-    - stye the right div
+    Responsive design
+    * Make instagram link work
+
     -->
 
     <style>
@@ -28,9 +29,10 @@
           rgba(250, 204, 135, 1) 68%,
           rgba(254, 156, 110, 1) 100%
         );
+        background-size: cover;
+        background-attachment: fixed;
+        /* overflow: hidden; */
         color: #770000;
-        height: 94vh; /*Ensures full gradient visibility*/
-        justify-content: space-between;
       }
       .logo {
         margin-top: 3.8%;
@@ -43,7 +45,7 @@
         justify-content: center;
         margin-left: 5%;
       }
-      .left {
+      .description {
         width: 30%;
         margin-top: 1%;
         margin-left: 17%;
@@ -55,7 +57,7 @@
         font-weight: 400;
         line-height: 1.7;
       }
-      .right {
+      .contact {
         width: 45%;
         margin-top: 7%;
         margin-left: 12%;
@@ -64,7 +66,7 @@
         font-weight: 900;
         line-height: 1.7;
       }
-      .right a {
+      .contact a {
         color: #770000;
         text-decoration: none;
       }
@@ -85,15 +87,47 @@
         margin-left: 38%;
         margin-top: 2%;
       }
+
       @media (max-width: 768px) {
         .container {
           flex-direction: column;
-          text-align: center;
-          height: auto;
+          align-items: center;
+          margin: auto;
+          /* background-color: rgb(202, 192, 211); */
         }
         .logo {
-          width: 5%;
-          background-color: #1e90ff;
+          padding-top: 5%;
+          width: 20%;
+          margin: auto;
+          /* background-color: #1e90ff; */
+        }
+        .description {
+          width: 75%;
+          /* margin-top: 10%; */
+          padding-top: 10%;
+          margin: auto;
+          /* background-color: #19cee2; */
+          font-size: 115%;
+          font-weight: 700;
+        }
+        .slanted-line {
+          transform: rotate(-110deg);
+          margin-top: -40%;
+          height: 40vh;
+          /* background-color: red; */
+        }
+        .contact {
+          width: 75%;
+          margin: auto;
+          margin-top: -30%;
+          /* background-color: #19cee2; */
+          font-size: 110%;
+        }
+        .bottom-text {
+          width: 90%;
+          margin: auto;
+          margin-top: 10%;
+          font-size: 80%;
         }
       }
     </style>
@@ -105,16 +139,16 @@
       <img src="nun.svg" alt="Nůn Studios Logo" />
     </div>
     <div class="container">
-      <div class="left">
+      <div class="description">
         nůn studios is a cooperatively run risograph and publication studio
         located in Portland, Oregon. We function not only as a workspace but as
         a center where art converges with advocacy.
       </div>
       <div class="slanted-line"></div>
-      <div class="right">
+      <div class="contact">
         <p>
           <span style="color: #0c7d81">Find us&nbsp;</span>
-          <a href="https://instagram.com/hypothetical_link" target="_blank">
+          <a href="https://instagram.com/nun.studios.pdx" target="_blank">
             <img
               src="Instagram_logo.png"
               alt="Instagram"
